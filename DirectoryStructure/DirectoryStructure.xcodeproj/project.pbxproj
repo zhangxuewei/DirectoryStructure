@@ -11,6 +11,8 @@
 		BA5453B31D41C1CF00DD6403 /* DirectoryStructureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5453B21D41C1CF00DD6403 /* DirectoryStructureTests.m */; };
 		BA5453BE1D41C1CF00DD6403 /* DirectoryStructureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5453BD1D41C1CF00DD6403 /* DirectoryStructureUITests.m */; };
 		BA5453CC1D41C1F800DD6403 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5453CB1D41C1F800DD6403 /* Images.xcassets */; };
+		BA8A586B1D42252C0007CDE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8A586D1D42252C0007CDE2 /* InfoPlist.strings */; };
+		BA8A58721D4226450007CDE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA8A58741D4226450007CDE2 /* Localizable.strings */; };
 		BAF2602E1D41E8FD003BC4C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF2600B1D41E8FD003BC4C4 /* AppDelegate.m */; };
 		BAF2602F1D41E8FD003BC4C4 /* DSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF260111D41E8FD003BC4C4 /* DSScrollView.m */; };
 		BAF260301D41E8FD003BC4C4 /* DSShareHelps.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF260141D41E8FD003BC4C4 /* DSShareHelps.m */; };
@@ -52,6 +54,10 @@
 		BA5453CB1D41C1F800DD6403 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA8A58611D420A650007CDE2 /* APIStringMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStringMacro.h; sourceTree = "<group>"; };
 		BA8A58621D420AE00007CDE2 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		BA8A586C1D42252C0007CDE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA8A586F1D4225D00007CDE2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BA8A58731D4226450007CDE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA8A58751D4226470007CDE2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BAF2600A1D41E8FD003BC4C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAF2600B1D41E8FD003BC4C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BAF260101D41E8FD003BC4C4 /* DSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSScrollView.h; sourceTree = "<group>"; };
@@ -149,6 +155,8 @@
 				BA5453A91D41C1CF00DD6403 /* Info.plist */,
 				BA54539F1D41C1CE00DD6403 /* main.m */,
 				BAF260371D41EC40003BC4C4 /* PrefixHeader.pch */,
+				BA8A586D1D42252C0007CDE2 /* InfoPlist.strings */,
+				BA8A58741D4226450007CDE2 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = BA5453921D41C1CE00DD6403;
 			productRefGroup = BA54539C1D41C1CE00DD6403 /* Products */;
@@ -478,6 +487,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5453CC1D41C1F800DD6403 /* Images.xcassets in Resources */,
+				BA8A58721D4226450007CDE2 /* Localizable.strings in Resources */,
+				BA8A586B1D42252C0007CDE2 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +600,27 @@
 			targetProxy = BA5453BA1D41C1CF00DD6403 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA8A586D1D42252C0007CDE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA8A586C1D42252C0007CDE2 /* en */,
+				BA8A586F1D4225D00007CDE2 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA8A58741D4226450007CDE2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA8A58731D4226450007CDE2 /* en */,
+				BA8A58751D4226470007CDE2 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BA5453C01D41C1CF00DD6403 /* Debug */ = {
