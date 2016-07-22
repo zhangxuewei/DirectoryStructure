@@ -19,10 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    DSLog(@"%f",self.view.width);
-    BACK(^{
-        DSLog(@"hahhahah");
+    MAIN(^{
+        DSLog(@"MAIN");
     });
-//    SYNTHESIZE_SINGLETON_FOR_CLASS(<#classname#>)
+    @WeakObj(self);
+//    selfWeak
+    BACK(^{
+        @StrongObj(self);
+        DSLog(@" %@ BACK", self.view);
+    });
+    
+    UILabel*label;
+    NSString *str;
+    if (IsNilOrNull(label)) {
+        DSLog(@".label.");
+    }
+    if (IsNilOrNull(str)) {
+        DSLog(@".str.");
+    }
+    
 }
 
 

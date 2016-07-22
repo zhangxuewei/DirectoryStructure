@@ -9,6 +9,24 @@
 #ifndef UtilsMacro_h
 #define UtilsMacro_h
 
+#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o
+#define StrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak
+//#define StrongObj(o) autoreleasepool{} __strong typeof(o##Weak) o##Strong = o##Weak
+
+
+//获取系统版本
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define CurrentSystemVersion [[UIDevice currentDevice] systemVersion]
+
+//判断是真机还是模拟器
+#if TARGET_OS_IPHONE
+//iPhone Device
+#endif
+
+#if TARGET_IPHONE_SIMULATOR
+//iPhone Simulator
+#endif
+
 //单例化一个类
 #define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) \
 \
