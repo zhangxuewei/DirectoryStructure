@@ -50,6 +50,8 @@
 		BA5453BD1D41C1CF00DD6403 /* DirectoryStructureUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectoryStructureUITests.m; sourceTree = "<group>"; };
 		BA5453BF1D41C1CF00DD6403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA5453CB1D41C1F800DD6403 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA8A58611D420A650007CDE2 /* APIStringMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIStringMacro.h; sourceTree = "<group>"; };
+		BA8A58621D420AE00007CDE2 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		BAF2600A1D41E8FD003BC4C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAF2600B1D41E8FD003BC4C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BAF260101D41E8FD003BC4C4 /* DSScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSScrollView.h; sourceTree = "<group>"; };
@@ -227,6 +229,8 @@
 				BAF260181D41E8FD003BC4C4 /* UtilsMacro.h */,
 				BAF260191D41E8FD003BC4C4 /* VendersMacro.h */,
 				BAF260171D41E8FD003BC4C4 /* NotificationMacro.h */,
+				BA8A58611D420A650007CDE2 /* APIStringMacro.h */,
+				BA8A58621D420AE00007CDE2 /* Macro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";

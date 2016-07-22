@@ -17,12 +17,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "Macro.h"
 
 #endif
-
-#import "AppMacro.h"
-#import "UtilsMacro.h"
-#import "VendersMacro.h"
-#import "NotificationMacro.h"
 
 #endif /* PrefixHeader_pch */

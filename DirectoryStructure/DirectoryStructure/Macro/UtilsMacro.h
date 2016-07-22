@@ -9,6 +9,62 @@
 #ifndef UtilsMacro_h
 #define UtilsMacro_h
 
+//单例化一个类
+#define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) \
+\
+static classname *shared##classname = nil; \
+\
++ (classname *)shared##classname \
+{ \
+@synchronized(self) \
+{ \
+if (shared##classname == nil) \
+{ \
+shared##classname = ［self alloc] init]; \
+} \
+} \
+\
+return shared##classname; \
+}
+
+
+//设置View的tag属性
+#define VIEWWITHTAG(_OBJECT, _TAG) [_OBJECT viewWithTag : _TAG]
+//程序的本地化,引用国际化的文件
+#define MyLocal(x, ...) NSLocalizedString(x, nil)
+
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
+
+//文件目录
+#define kPathTemp      NSTemporaryDirectory()
+#define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,\
+NSUserDomainMask, YES) objectAtIndex:0]
+
+#define kPathCache   [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,\
+NSUserDomainMask, YES) objectAtIndex:0]
+
+//角度转弧度
+#define DEGREES_TO_RADIANS(d) (d * M_PI / 180)
+
+//大于等于7.0的ios版本
+#define iOS7_OR_LATER SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")
+
+//大于等于8.0的ios版本
+#define iOS8_OR_LATER SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")
+
+// 获取RGB颜色
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+#define IsNilOrNull(_ref)   (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]))
+
+
+//转换
+#define NSStringFromInt(intValue) [NSString stringWithFormat:@"%d",intValue]
+
+
 //字体大小
 #define kFont38 [UIFont systemFontOfSize:38]
 #define kFont34 [UIFont systemFontOfSize:34]
@@ -28,20 +84,5 @@
 #define kFont12 [UIFont systemFontOfSize:12]
 #define kFont11 [UIFont systemFontOfSize:11]
 #define kFont10 [UIFont systemFontOfSize:10]
-
-//颜色
-#define kDSColorRGB(r,g,b) [UIColor \
-colorWithRed:r/255.0 \
-green:g/255.0 \
-blue:b/255.0 alpha:1]
-
-#define kDSColorRGBA(r,g,b) [UIColor\
-colorWithRed:r/255.0\
-green:g/255.0\
-blue:b/255.0\
-alpha:.5]
-
-//转换
-#define NSStringFromInt(intValue) [NSString stringWithFormat:@"%d",intValue]
 
 #endif /* UtilsMacro_h */

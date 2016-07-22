@@ -26,16 +26,29 @@
 #define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
+//状态栏高度
+#define STATUS_BAR_HEIGHT 20
+//NavBar高度
+#define NAVIGATION_BAR_HEIGHT 44
+//状态栏 ＋ 导航栏 高度
+#define STATUS_AND_NAVIGATION_HEIGHT ((STATUS_BAR_HEIGHT) + (NAVIGATION_BAR_HEIGHT))
+
+//屏幕 rect
+#define SCREEN_RECT ([UIScreen mainScreen].bounds)
+
+#define CONTENT_HEIGHT (SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - STATUS_BAR_HEIGHT)
+
+//屏幕分辨率
+#define SCREEN_RESOLUTION (SCREEN_WIDTH * SCREEN_HEIGHT * ([UIScreen mainScreen].scale))
+
+#define DEFAULT_TAB_BAR_HEIGHT 49
+
+
 //自定义log
 #ifdef DEBUG
-#define DSLog(...) NSLog(__VA_ARGS__)
+#define DSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define DSLog(...)
 #endif
-
-//导航相关
-#define DEFAULT_NAVIGATION_BAR_HEIGHT 44
-#define DEFAULT_NAVIGATION_TITLE_WIDTH 180
-#define DEFAULT_TAB_BAR_HEIGHT 49
 
 #endif /* AppMacro_h */

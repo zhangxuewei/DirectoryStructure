@@ -18,8 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
    DSLog(@"%f",self.view.width);
+    BACK(^{
+        DSLog(@"hahhahah");
+    });
+//    SYNTHESIZE_SINGLETON_FOR_CLASS(<#classname#>)
 }
 
 
